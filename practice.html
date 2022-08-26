@@ -8,41 +8,41 @@
     <!--CSS-->
     <link rel="stylesheet" href="/css/practice.css">
 
+    <!--JS-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     </head>  
     <body>
       <div class="container">
         <form onsubmit="sendEmail(); reset(); return false;">
           <h3>Get in touch</h3>
-          <input type="text" id="name" placeholder="your name" required>
+          <div>
+          <input type="text" id="name" class="text" placeholder="your name" required>
+        </div>
           <input type="email" id="email" placeholder="email" required>
           <input type="text" id="phone" placeholder="phone number" required>
           <textarea id="message" rows="4" placeholder="how can we help you"></textarea>
           <button type="submit">send</button>
         </form>
       </div>
-
-      <script src="https://smtpjs.com/v3/smtp.js"></script>
-      
-      <script>
-
-        function sendEmail(){
-          Email.send({
-            Host : "smtp.gmail.com",
-            Username : "ejzhrla@gmail.com",
-            Password : "kreg6022",
-            To : 'ejzhrla@gmail.com',
-            From : document.getElementById("email").value,
-            Subject : "New contact Form Enquiry",
-            Body : "Name: " + document.getElementById("name").value
-            + "<br> Email: " + document.getElementById("Email").value
-            + "<br> Phone: " + document.getElementById("phone").value
-            + "<br> Message: " + document.getElementById("Message").value
-      }).then(
-        message => alert("Message sent sucessfully")
-      );
-        }
-
-      </script>
-      
     </body>
+    <script>
+      function sendEmail(){
+        Email.send({
+          Host : "smtp.elasticemail.com",
+          Username : "thecorative@naver.com",
+          Password : "349A8E371533548A10694903C27DE5D9470E",
+          To : 'yatav@yatavent.com',
+          From : 'yatav@yatavent.com',
+          Subject : "New contact Form Enquiry",
+          Body : "Name: " + document.getElementById("name").value
+          + "<br> Email: " + document.getElementById("email").value
+          + "<br> Phone: " + document.getElementById("phone").value
+          + "<br> Message: " + document.getElementById("message").value
+    }).then(
+      message => alert("Message sent sucessfully")
+    );
+      }
+
+    </script>
 </html>
