@@ -18,7 +18,7 @@
           <h3>Get in touch</h3>
           <div>
           <input type="text" id="name" class="text" placeholder="your name" required>
-        </div>
+          </div>
           <input type="email" id="email" placeholder="email" required>
           <input type="text" id="phone" placeholder="phone number" required>
           <textarea id="message" rows="4" placeholder="how can we help you"></textarea>
@@ -31,9 +31,9 @@
         Email.send({
           Host : "smtp.elasticemail.com",
           Username : "thecorative@naver.com",
-          Password : "349A8E371533548A10694903C27DE5D9470E",
-          To : 'yatav@yatavent.com',
-          From : 'yatav@yatavent.com',
+          Password : "1679F10A2EF8C4B74C2B7EA2D8362FA8659E",
+	  		  To : 'yatav@yatavent.com',
+		    	From : 'thecorative@naver.com',
           Subject : "New contact Form Enquiry",
           Body : "Name: " + document.getElementById("name").value
           + "<br> Email: " + document.getElementById("email").value
