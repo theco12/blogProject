@@ -1,37 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-import {useState} from 'react';
+import { useState } from "react";
 
-function App() {
+const App = () => {
+  const [num, setNum] = useState(0); // react 내자된 훅 api 라서
 
-  let post = '강남우동맛집';
-  useState('남자 코트 추천')
+  const clickFunc = () => {
+   
+    setNum((prev) => {
+      console.log(prev); // 이전 상태값
+      return prev + 1;
+    });
+    // 함수를 인자로 넣어주세요!
+
+  };
+
 
   return (
-    <div className="App">
-      <div className="blog_nav">
-        <h4>블로그임</h4>
-      </div>
-      <div className="list">
-        <h4>글제목</h4>
-        <p>9월 11일 발행</p>
-      </div>
-      <div className="list">
-        <h4>글제목</h4>
-        <p>9월 11일 발행</p>
-      </div>
-      <div className="list">
-        <h4>글제목</h4>
-        <p>9월 11일 발행</p>
-      </div>
-      <div className="modal">
-        <h4>제목</h4>
-        <p>날짜</p>
-        <p>상세내용</p>
-      </div>
-    
+    <div>
+      <span>{num}</span>
+      <button onClick={clickFunc}>+</button>
     </div>
   );
-}
+};
 
 export default App;
