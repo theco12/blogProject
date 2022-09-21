@@ -7,6 +7,26 @@
   pointer-events: none;
 }
 
+.gnb{
+  background-color: #28292b;
+  height: 60px;
+  color: white;
+  display: flex;
+  padding-left: 20px;
+  width: 100%;
+}
+
+div{
+  box-sizing: border-box;
+}
+
+.list{
+  padding-left: 20px;
+  text-align: left;
+  border-bottom: 1px solid grey;
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -24,9 +44,7 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
+
 
 @keyframes App-logo-spin {
   from {
