@@ -26,6 +26,12 @@ div{
   border-bottom: 1px solid grey;
 }
 
+.modal{
+  margin-top: 20px;
+  padding: 20px;
+  background: rgb(235, 235, 235);
+  text-align: left;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
