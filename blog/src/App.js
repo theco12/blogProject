@@ -40,6 +40,10 @@ function App() {
       <div className="list">
         <h4>{ 글제목[2] } <span onClick={() => { 따봉변경(따봉+1) }}>👍</span> { 따봉 } </h4>
         <p>2월 18일 발행</p>
+
+        <button onClick={() => {
+                    
+          }}>팝업창 클릭</button>
       </div>
 
       {
