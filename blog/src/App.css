@@ -7,7 +7,7 @@
   pointer-events: none;
 }
 
-.gnb{
+.gnb {
   background-color: #28292b;
   height: 60px;
   color: white;
@@ -16,23 +16,26 @@
   width: 100%;
 }
 
-div{
+div {
   box-sizing: border-box;
 }
 
-.list{
+.list {
   padding-left: 20px;
   text-align: left;
   border-bottom: 1px solid grey;
 }
 
-.modal{
+.modal {
   margin-top: 20px;
   padding: 20px;
-  background: rgb(235, 235, 235);
+  background: rgb(231, 231, 231);
   text-align: left;
 }
 
+.list span {
+  cursor: pointer;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -49,8 +52,6 @@ div{
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-
 
 @keyframes App-logo-spin {
   from {

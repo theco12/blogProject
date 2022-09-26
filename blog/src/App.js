@@ -78,10 +78,23 @@ function App() {
         </h4>
         <p>2월 18일 발행</p>
 
-        <button onClick={() => {}}>팝업창 클릭</button>
-      </div>
+        <button
+          onClick={() => {
+            setmodal(true);
+          }}
+        >
+          팝업창 열기
+        </button>
 
-      {modal == true ? <Modal /> : null}
+        <button
+          onClick={() => {
+            setmodal(false);
+          }}
+        >
+          팝업창 닫기
+        </button>
+      </div>
+      {modal == true ? <Modal 제목변경={제목변경} 글제목={글제목} /> : null}
     </div>
   );
 }
@@ -90,12 +103,19 @@ function App() {
 //1.반복적인 html을 축약할때
 //2.큰페이지들
 //3.자주변경되는것들
-function Modal() {
+function Modal(props) {
   return (
     <div className="modal">
-      <h4>제목</h4>
+      <h4>{props.글제목[0]}</h4>
       <p>날짜</p>
       <p>상세내용</p>
+      <button
+        onClick={() => {
+          props.제목변경(["여자 코트 추천", "아이 코트 추천", "부모님선물"]);
+        }}
+      >
+        글수정
+      </button>
     </div>
   );
 }
