@@ -10,6 +10,7 @@ function App() {
   let logo = "ReactBlog";
   let [따봉, 따봉변경] = useState(0);
   let [modal, setmodal] = useState(false);
+  let [title, settitle] = useState(0);
 
   return (
     <div className="App">
@@ -18,15 +19,15 @@ function App() {
       </div>
       <div className="list">
         <h4>
-          {글제목[0]}{" "}
+          {글제목[0]}
           <span
             onClick={() => {
               따봉변경(따봉 + 1);
             }}
           >
             👍
-          </span>{" "}
-          {따봉}{" "}
+          </span>
+          {따봉}
         </h4>
         <p>2월 17일 발행</p>
         <button
@@ -94,7 +95,19 @@ function App() {
           팝업창 닫기
         </button>
       </div>
-      {modal == true ? <Modal 제목변경={제목변경} 글제목={글제목} /> : null}
+
+      <button onClick={() => {
+        settitle(0)
+      }}>글제목0</button>   
+
+      <button onClick={() => {
+        settitle(1)
+      }}>글제목1</button>  
+      <button onClick={() => {
+        settitle(2)
+      }}>글제목2</button>  
+
+      {modal == true ? <Modal title={title} 제목변경={제목변경} 글제목={글제목} /> : null}
     </div>
   );
 }
@@ -106,7 +119,7 @@ function App() {
 function Modal(props) {
   return (
     <div className="modal">
-      <h4>{props.글제목[0]}</h4>
+      <h4>{props.글제목[props.title]}</h4>
       <p>날짜</p>
       <p>상세내용</p>
       <button
