@@ -96,18 +96,37 @@ function App() {
         </button>
       </div>
 
-      <button onClick={() => {
-        settitle(0)
-      }}>글제목0</button>   
+      <button
+        onClick={() => {
+          settitle(0);
+        }}
+      >
+        글제목0
+      </button>
 
-      <button onClick={() => {
-        settitle(1)
-      }}>글제목1</button>  
-      <button onClick={() => {
-        settitle(2)
-      }}>글제목2</button>  
+      <button
+        onClick={() => {
+          settitle(1);
+        }}
+      >
+        글제목1
+      </button>
+      <button
+        onClick={() => {
+          settitle(2);
+        }}
+      >
+        글제목2
+      </button>
 
-      {modal == true ? <Modal title={title} 제목변경={제목변경} 글제목={글제목} /> : null}
+      <div>
+        <input type= "text" title="입력"></input>
+        <button onClick={() => {}}>클릭</button>
+      </div>
+
+      {modal == true ? (
+        <Modal title={title} 제목변경={제목변경} 글제목={글제목} />
+      ) : null}
     </div>
   );
 }
