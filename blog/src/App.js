@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import "./App.css";
 import { useState, useTransition } from "react";
 
@@ -8,24 +9,9 @@ const App = () => {
     "파이썬공부",
   ]);
 
-  const [names, setnames] = useState(["홍길동", "김민수"]);
-  const [input, setinput] = useState("");
-  const handleinputchange = (e) => {
-    setinput(e.target.value);
-  };
-
-  const handleupload = () => {
-    setnames((prevstate) => {
-      return [input, ...prevstate];
-    });
-  };
-
   let logo = useState("reactblog");
   let [like, setlike] = useState(0);
   let [modal, setmodal] = useState(false);
-  [1, 2, 3].map(function (a) {
-    return "123456";
-  });
 
   return (
     <div className="App">
@@ -47,15 +33,6 @@ const App = () => {
       </div>
 
       {modal === true ? <Modal /> : null}
-
-      <div>
-        <input type="text" value={input} onChange={handleinputchange} />
-        <button onClick={handleupload}>upload</button>
-
-        {names.map((name, idx) => {
-          return <p key={idx}> {name}</p>;
-        })}
-      </div>
     </div>
   );
 };
