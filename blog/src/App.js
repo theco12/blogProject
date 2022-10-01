@@ -12,6 +12,7 @@ const App = () => {
   let logo = useState("reactblog");
   let [like, setlike] = useState(0);
   let [modal, setmodal] = useState(false);
+  let [입력값, 입력값변경] = useState("");
 
   return (
     <div className="App">
@@ -32,15 +33,38 @@ const App = () => {
         <p>2022년 9월 29일</p>
       </div>
 
-      {modal === true ? <Modal /> : null}
+      {글제목.map(function (a) {
+        return (
+          <div className="list">
+            <h4>{a}</h4>
+            <p>2022년 9월 29일</p>
+          </div>
+        );
+      })}
+      <button
+        onClick={() => {
+          setmodal(true);
+        }}
+      >
+        팝업열기
+      </button>
+
+      <button
+        onClick={() => {
+          setmodal(false);
+        }}
+      >
+        팝업닫기
+      </button>
+      {modal === true ? <Modal 글제목={글제목} /> : null}
     </div>
   );
 };
 
-const Modal = () => {
+const Modal = (props) => {
   return (
     <div className="modal">
-      <h4>제목</h4>
+      <h4>{props.글제목[0]}</h4>
       <p>날짜</p>
     </div>
   );
