@@ -1,27 +1,19 @@
 /*eslint-disable*/
 import "./App.css";
 import { useState, useTransition } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
+import Home from "./page/home";
+import AboutPage from "./page/aboutpage";
 
 const App = () => {
   return (
     <div className="App">
       <Routes>
-        <Route path="/detail" element={<div>상세페이지</div>} />
+        <Route path="/home" element={<Home />} />
         <Route />
-
-        <Route
-          path="/about"
-          element={
-            <div>
-              about page
-              <Link></Link>
-            </div>
-          }
-        />
+        <Route path="/aboutpage" element={<AboutPage />} />
         <Route />
       </Routes>
-      ;
     </div>
   );
 };
