@@ -4,6 +4,7 @@ import { useState, useTransition } from "react";
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import Home from "./page/home";
 import AboutPage from "./page/aboutpage";
+import Button from "./Components/Button";
 
 const App = () => {
   return (
