@@ -1,7 +1,7 @@
 /*eslint-disable*/
 import "./App.css";
 import { useState, useTransition } from "react";
-import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
+import { Routes, Route, Link, Outlet, BrowserRouter } from "react-router-dom";
 import Home from "./page/home";
 import AboutPage from "./page/aboutpage";
 import Button from "./Components/Button";
@@ -12,10 +12,8 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/aboutpage" element={<AboutPage />} />
-      </Routes>
+      <Route path="/home" element={<Home />} />
+      <Route path="/aboutpage" element={<AboutPage />} />
     </div>
   );
 };
