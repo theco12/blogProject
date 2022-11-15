@@ -1,5 +1,21 @@
+import styled from "styled-components";
+import React from "react";
+import { useRef } from "react";
+import Button from "./button.js";
+
 const Home = () => {
-  return <div>안녕하세요 홈입니다. </div>;
+  return (
+    <div>
+      <label htmlFor="ex_file">
+      </label>
+      <input
+        type="file"
+        id="ex_file"
+        accept="image/jpg, image/png, image/jpeg"
+        onChange={(e) => console.log(e.target.files[0])}
+      />
+    </div>
+  );
 };
 
 export default Home;
