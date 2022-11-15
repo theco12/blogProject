@@ -4,18 +4,7 @@ import { useRef } from "react";
 import Button from "./button.js";
 
 const Home = () => {
-  return (
-    <div>
-      <label htmlFor="ex_file">
-      </label>
-      <input
-        type="file"
-        id="ex_file"
-        accept="image/jpg, image/png, image/jpeg"
-        onChange={(e) => console.log(e.target.files[0])}
-      />
-    </div>
-  );
+  return <div>Home</div>;
 };
 
 export default Home;
