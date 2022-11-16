@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Header from "./header.js";
+import Header from "./header/header.js";
 import Safari from "./safari.js";
 import Home from "./home.js";
 import About from "./about.js";
@@ -10,7 +10,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/safari" element={<Safari />} />
