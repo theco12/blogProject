@@ -10,6 +10,7 @@ const Header = () => {
           <Link to="/" className="logo">
             Thecorative
           </Link>
+
           <Link to="/home" className="nav">
             home
           </Link>
