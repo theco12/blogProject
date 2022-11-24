@@ -17,12 +17,6 @@ let data = [
     content: " oenglinsh dadf",
     price: "134525",
   },
-  {
-    id: 3,
-    title: "adsfasdfedadf",
-    content: "orn adsfdsaf",
-    price: "112230",
-  },
 ];
 
 export default data;

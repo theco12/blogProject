@@ -4,8 +4,10 @@ import Header from "./header/header.js";
 import Safari from "./safari.js";
 import Home from "./home.js";
 import About from "./about.js";
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link, Outlet } from "react-router-dom";
 import Shoes from "./pages/Shoes.js";
+import Event from "./event/event.js";
+import One from "./event/one.js";
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/safari" element={<Safari />} />
         <Route path="/about" element={<About />} />
+        <Route path="/event" element={<Event />} />
       </Routes>
     </div>
   );

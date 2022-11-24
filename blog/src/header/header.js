@@ -20,6 +20,9 @@ const Header = () => {
           <Link to="/about" className="nav">
             about
           </Link>
+          <Link to="/event" className="nav">
+            Event
+          </Link>
         </div>
       </Nav>
     </div>
