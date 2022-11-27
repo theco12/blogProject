@@ -1,7 +1,4 @@
 import shoes from "../css/shoes.css";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import data from "../data.js";
 import { useState } from "react";
 import styled from "styled-components";
