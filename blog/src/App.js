@@ -14,16 +14,16 @@ function App() {
     <div className="App">
       <Header />
 
-      <Routes>
+      <Route>
         <Route path="/" element={<Shoes />} />
-      </Routes>
+      </Route>
 
-      <Routes>
+      <Route>
         <Route path="/home" element={<Home />} />
         <Route path="/safari" element={<Safari />} />
         <Route path="/about" element={<About />} />
         <Route path="/event" element={<Event />} />
-      </Routes>
+      </Route>
     </div>
   );
 }
