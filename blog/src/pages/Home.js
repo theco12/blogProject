@@ -1,17 +1,13 @@
-import Header from "./Header.js";
-
-const dummyList = [1, 2, 3, 4, 5, 6, 7, 8];
+import { css } from "@emotion/react";
+import styled from "@emotion/styled";
 
 const Home = () => {
-  return (
-    <div>
-      <Header />
-
-      {dummyList.map((i) => {
-        console.log("Partner" + i);
-      })}
-    </div>
-  );
+  return <div css={mainBG}>Home page</div>;
 };
+
+const mainBG = css`
+  background-image: url("./images/bg.png");
+  height: 600px;
+`;
 
 export default Home;
