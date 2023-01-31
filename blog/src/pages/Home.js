@@ -1,20 +1,26 @@
+import "../css/home.css";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Shoes from "../components/shoes";
 import { useState } from "react";
 
 const Home = () => {
-  const [isDark, setIsdark] = useState(false);
-  const DarkMode = () => {
-    setIsdark(!isDark);
-  };
-
   return (
-    <div>
-      안녕하세요
-      <div>
-        <button onClick={DarkMode}>
-          {isDark ? <div>다크모드</div> : <div>라이트모드</div>}
-        </button>
+    <>
+      <img src={process.env.PUBLIC_URL + "/images/bg.png"} className="main-bg" />
+      <div className="container">
+        <Container>
+          <Row className="justify-content-md-center">
+            <Col md="auto">Detail Page 상품</Col>
+          </Row>
+
+          <Row>
+            <Col xs={6} md={4}></Col>
+          </Row>
+        </Container>
       </div>
-    </div>
+    </>
   );
 };
 
