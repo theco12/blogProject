@@ -12,8 +12,8 @@ const Header = () => {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/detail">Detail</Nav.Link>
             <Nav.Link href="/useMemo1">useMemo</Nav.Link>
-            <Nav.Link href="/useMemo1">useCallBack</Nav.Link>
-            <Nav.Link href="/useMemo1">useReducer111</Nav.Link>
+            <Nav.Link href="/useCallback1">useCallBack</Nav.Link>
+            <Nav.Link href="/map">Map</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
