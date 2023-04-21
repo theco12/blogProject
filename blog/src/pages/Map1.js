@@ -1,11 +1,14 @@
 import React from "react";
-import Profile from "../data/data.json";
+import data from "../data/data.json";
 const Map1 = () => {
-  console.log(Profile);
+  const arr = [1, 2, 3, 4, 5];
+
   return (
-    <>
-      <div>gd</div>
-    </>
+    <ul>
+      {arr.map((a, i) => {
+        return <li key={i}>{a}</li>;
+      })}
+    </ul>
   );
 };
 
