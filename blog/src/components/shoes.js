@@ -9,6 +9,9 @@ const Shoes = (props) => {
       <img src={`https://codingapple1.github.io/shop/shoes` + (props.i + 1) + ".jpg"} width="80%" />
       <h1>{shoes.title}</h1>
       <p>{shoes.content}</p>
+
+      
+
     </>
   );
 };
