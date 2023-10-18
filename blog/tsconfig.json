@@ -22,6 +22,7 @@
     "pages/*": ["pages/*"],
     "components/*": ["components/*"],
     "firebaseApp/*": ["firebaseApp/*"],
-    "dotenv/*": ["dotenv/*"]
+    "dotenv/*": ["dotenv/*"],
+    "context/*": ["context/*"]
   }
 }
