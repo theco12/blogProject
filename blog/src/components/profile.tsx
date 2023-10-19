@@ -17,8 +17,6 @@ const onSignOut = async () => {
 export default function Profile() {
   const { user } = useContext(AuthContext);
 
-  console.log(user);
-
   return (
     <div className="profile__box">
       <div className="flex__box_lg">

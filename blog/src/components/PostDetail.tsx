@@ -1,11 +1,10 @@
 import { Link, useParams } from "react-router-dom";
-import { useContext, useState, useEffect } from "react";
-import AuthContext from "context/AuthContext";
+import { useState, useEffect } from "react";
 import { PostProps } from "./PostList";
 import { db } from "firebaseApp";
-import { doc, getDoc } from "firebase/firestore";
-import { collection, getDocs } from "firebase/firestore";
+import { deleteDoc, doc, getDoc } from "firebase/firestore";
 import Loader from "./Loader";
+import { toast } from "react-toastify";
 
 export default function PostDetail() {
   const [posts, setPosts] = useState<PostProps | null>(null);
@@ -20,7 +19,12 @@ export default function PostDetail() {
   };
 
   const handleDelete = async () => {
-    console.log("삭제되었습니다.");
+    const confirm = window.confirm("정말로 삭제하시겠습니까?");
+    if (confirm && posts && posts?.id) {
+      await deleteDoc(doc(db, "posts", posts?.id));
+      toast.success("게시글이 삭제되었습니다.");
+      window.location.href = "/";
+    }
   };
 
   useEffect(() => {
@@ -41,6 +45,8 @@ export default function PostDetail() {
               <div className="post__date"></div>
             </div>
             <div className="post__utils-box">
+              {posts?.category && <div className="post__catagory">{posts?.category}</div>}
+
               <div className="post__delete" role="presentaion" onClick={handleDelete}>
                 삭제
               </div>
