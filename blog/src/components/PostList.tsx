@@ -4,7 +4,13 @@ import AuthContext from "context/AuthContext";
 import { db } from "firebaseApp";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import { get } from "http";
+
+export interface CommentsInterface {
+  content: string;
+  uid: string;
+  email: string;
+  createdAt: string;
+}
 
 interface PostListProps {
   hasNavigation?: boolean;
@@ -22,6 +28,7 @@ export interface PostProps {
   updatedAt?: string;
   uid?: string;
   CategoryTpye?: CategoryTpye;
+  comments?: CommentsInterface[];
 }
 
 type TabType = "all" | "my";
