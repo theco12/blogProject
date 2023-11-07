@@ -11,7 +11,7 @@ export default function PostForm() {
   const [summary, setSummary] = useState<string>("");
   const [content, setContent] = useState<string>("");
   const [posts, setPosts] = useState<PostProps | null>(null);
-  const [category, setCategory] = useState<CategoryTpye>("Frontend");
+  const [category, setCategory] = useState<CategoryTpye>("BookReview");
 
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();

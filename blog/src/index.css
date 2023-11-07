@@ -10,6 +10,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+.DookLogo {
+  padding-top: 5px;
+  width: 80px;
+}
+
 header {
   display: flex;
   justify-content: space-between;

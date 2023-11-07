@@ -4,7 +4,11 @@ export default function Header() {
   return (
     <header className="header">
       <Link to="/" className="header__logo">
-        Blog
+        <img
+          src={`${process.env.PUBLIC_URL}/image/Dook-Logo.png`}
+          alt="dook"
+          className="DookLogo"
+        />
       </Link>
       <div>
         <Link to="/posts/new">글쓰기</Link>

@@ -32,8 +32,8 @@ export interface PostProps {
 }
 
 type TabType = "all" | "my";
-export type CategoryTpye = "Frontend" | "Backend" | "DevOps" | "Design";
-export const CATEGORYS: CategoryTpye[] = ["Frontend", "Backend", "DevOps", "Design"];
+export type CategoryTpye = "BookReview" | "BookShare" | "BookSense";
+export const CATEGORYS: CategoryTpye[] = ["BookReview", "BookShare", "BookSense"];
 
 export default function PostList({ hasNavigation = true, defaultTab = "all" }: PostListProps) {
   const [activeTab, setActiveTab] = useState<TabType | CategoryTpye>(defaultTab);
