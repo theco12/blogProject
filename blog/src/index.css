@@ -24,6 +24,12 @@ header {
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+}
+
 header .header__logo {
   font-size: 20px;
   font-weight: 600;
@@ -309,6 +315,13 @@ ul.carousel__slides input {
   min-width: 100%;
   height: 90%;
   object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__slide-img img {
+    width: 20%;
+    height: 100%;
+  }
 }
 
 .carousel__controls {
